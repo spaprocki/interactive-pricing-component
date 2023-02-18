@@ -1,17 +1,19 @@
 @use "../abstracts" as *;
 
 .header {
-  position: absolute;
   @include flex-column-align-center;
   width: 100%;
-  text-align: center;
+  border-radius: 0px 0px 0px 191.5px;
+  padding-top: scaleSize(57px, 67px);
+  padding-bottom: scaleSize(198px, 237px);
+  background-color: $color-bg-header;
 
-  &__inner {
-    width: min(100% - 2 * scaleSize(1rem, 5rem), 80rem);
-    margin-top: scaleSize(1.6875rem, 4.25rem);
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
+  &__textbox {
+    width: 100%;
+    padding-top: scaleSize(32px, 37px);
+    padding-bottom: scaleSize(32px, 37px);
+    background-image: url("../assets/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

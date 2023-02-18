@@ -2,49 +2,14 @@
 
 .textbox {
     @include flex-column-align-center;
+    text-align: center;
 
-    &--hero {
-        width: min(100%, 25rem);
-        @include flex-column-align-center;
-
-        @include respond(medium-screen) {
-            width: scaleSize(19rem, 33.5rem, 48rem, 90rem);
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        & .paragraph {
-            margin-top: scaleSize(1.5rem, 2rem);
-        }
-    }
-
-    &--stories {
-        margin-top: 1rem;
+    & .paragraph {
+        margin-top: scaleSize(8px, 12px);
+        width: 180px;
 
         @include respond(medium-screen) {
-            margin-top: 0rem;
-            align-items: flex-start;
-            text-align: left;
-            width: scaleSize(16rem, 31.25rem, 48rem, 90rem);
-        }
-
-        & .paragraph {
-            margin-top: 1rem;
-            max-width: 32.5rem;
-
-            @include respond(medium-screen) {
-                margin-top: scaleSize(1rem, 1.625rem, 48rem, 90rem);
-            }
-        }
-    }
-
-    &--form {
-        align-items: flex-start;
-        text-align: left;
-        max-width: 21.5rem;
-
-        & .paragraph {
-            margin-top: 1rem;
+            width: 367px;
         }
     }
 }

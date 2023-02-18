@@ -17,3 +17,17 @@
     flex-direction: column;
     align-items: center;
 }
+
+@mixin focus-styles($outline-color: currentColor) {
+    &:focus,
+    :focus-visible {
+        outline-width: 0.1875rem;
+        outline-style: dashed;
+        outline-offset: 0.3125rem;
+        outline-color: $outline-color;
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
