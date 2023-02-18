@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+body {
+  box-sizing: border-box;
+  @include flex-column-align-center;
+  background-color: #fff;
+}

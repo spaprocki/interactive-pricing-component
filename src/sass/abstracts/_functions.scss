@@ -1,0 +1,47 @@
+@use "sass:math";
+@use "sass:string";
+
+
+@function strip-units($number) {
+    @return math.div($number, $number * 0 + 1);
+}
+
+@function convert($size) {
+    @if math.unit($size) == "px" {
+        $rems: math.div($size, 16);
+        $rems: strip-units($rems);
+        @return $rems;
+    } @else if math.unit($size) == "rem" {
+        $rems: strip-units($size);
+        @return $rems;
+    } @else {
+        @error "Wrong unit. Please use px or rem.";
+    }  
+}
+
+@function scaleSize($size-min, $size-max, $screen-size-min: 375px, $screen-size-max: 1440px) {
+    $vw: 'vw';
+    $rem: 'rem';
+
+    $screen-size-min-rem-unitless: convert($screen-size-min);
+    $screen-size-max-rem-unitless: convert($screen-size-max);
+    $size-min-rem-unitless: convert($size-min);
+    $size-max-rem-unitless: convert($size-max);
+
+    $a: $size-max-rem-unitless - $size-min-rem-unitless;
+    $b: $screen-size-max-rem-unitless - $screen-size-min-rem-unitless;
+
+    $c: $screen-size-min-rem-unitless * $size-max-rem-unitless;
+    $d: $screen-size-max-rem-unitless * $size-min-rem-unitless;
+    $e: $screen-size-min-rem-unitless - $screen-size-max-rem-unitless;
+
+    
+    $variant-factor: math.div(100 * $a, $b);
+    $constant-factor: math.div($c - $d, $e);
+    
+    @if $size-min > $size-max {
+        @return clamp(#{$size-max-rem-unitless}#{$rem}, #{$variant-factor}#{$vw} + #{$constant-factor}#{$rem}, #{$size-min-rem-unitless}#{$rem});
+    } @else {
+        @return clamp(#{$size-min-rem-unitless}#{$rem}, #{$variant-factor}#{$vw} + #{$constant-factor}#{$rem}, #{$size-max-rem-unitless}#{$rem});
+    }
+}

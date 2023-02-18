@@ -1,0 +1,12 @@
+@use "../abstracts" as *;
+
+.logo {
+    width: scaleSize(6.5rem, 12.5rem, 23.4375rem, 48rem);
+
+    &--footer {
+        width: auto;
+        height: 3rem;
+        margin-right: auto;
+        margin-left: -0.625rem;
+    }
+}

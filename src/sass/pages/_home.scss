@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+.main {
+    width: 100%;
+    // background-color: black;
+
+    & > * {
+        width: 100%;
+        @include flex-column-align-center;
+    }
+}
+
+.hero {
+    background-image: url("../assets/bg-hero-mobile.svg");
+    background-color: $color-very-pale-cyan;
+    background-repeat: no-repeat;
+    background-size: auto 93%;
+    background-position: top center;
+
+    @include respond(medium-screen) {
+        background-image: url("../assets/bg-hero-desktop.svg");
+        background-size: auto 100%;
+    }
+
+    &__inner {
+        @include flex-column-align-center;
+        margin-top: scaleSize(8.1875rem, 11.6875rem);
+        width: min(100% - 2 * scaleSize(2.1875rem, 5rem), 79.375rem);
+
+        @include respond(medium-screen) {
+            width: min(100% - 2 * scaleSize(1rem, 5rem), 80rem);
+            flex-direction: row;
+        }
+    }
+
+    &__btn {
+        margin-top: 2rem;
+        margin-bottom: scaleSize(2.3125rem, 4.5rem);
+    }
+
+    &__image {
+        margin-top: 3.5rem;
+        margin-bottom: scaleSize(2.3125rem, 4.5rem);
+
+        @include respond(medium-screen) {
+            margin-top: 0;
+            margin-left: 3.375rem;
+        }
+    }
+}
+
+.stories {
+    margin-top: scaleSize(3.6875rem, 10rem);
+
+    &__list {
+        width: min(100% - 2 * scaleSize(1.25rem, 6.5rem), 77rem);
+    }
+}
+
+.cta {
+    margin-top: scaleSize(7.5rem, 10rem);
+
+    &__inner {
+        z-index: 2;
+        width: min(100% - 2 * scaleSize(0.75rem, 2.25rem, 23.4375rem, 48rem), 50rem);
+        padding-top: scaleSize(2.5625rem, 3.5rem);
+        padding-bottom: scaleSize(2.5625rem, 3.5rem);
+        box-shadow: 0rem 0rem 0.875rem rgba(0, 0, 0, 0.0710768);
+        border-radius: 0.9375rem;
+        background: $color-white;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+    }
+}
