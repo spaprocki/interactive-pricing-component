@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.cta {
+    @include flex-column-align-center;
+    padding-top: scaleSize(24px, 32px);
+
+    &__features {
+        list-style-type: none;
+    }
+
+    &__btn {
+        margin-top: 32px;
+    }
+}

@@ -2,6 +2,7 @@
 
 .header {
   @include flex-column-align-center;
+  z-index: 1;
   width: 100%;
   border-radius: 0px 0px 0px 191.5px;
   padding-top: scaleSize(57px, 67px);

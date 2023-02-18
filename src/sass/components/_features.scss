@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.features {
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:is(:not(:first-child)) {
+            margin-top: 10px;
+        }
+    }
+
+    &__icon {
+        margin-right: 16px;
+    }
+
+    &__paragraph {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}

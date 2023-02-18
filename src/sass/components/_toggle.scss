@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.toggle {
+    display: flex;
+    align-items: center;
+    &__label {
+        font-size: 12px;
+        line-height: 16px;
+        position: relative;
+    }
+
+    &__discount {
+        position: absolute;
+        padding: 2px 7px;
+        top: 0;
+        margin-left: 5px;
+        border-radius: 9.5px;
+        font-size: 10px;
+        line-height: 14px;
+        color: $color-text-red;
+        background-color: $color-bg-red;
+
+        & span {
+            display: none;
+        }
+    }
+}

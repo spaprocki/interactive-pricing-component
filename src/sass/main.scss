@@ -1,6 +1,14 @@
 @use "base/index";
+
 @use "components/button";
+@use "components/cta";
+@use "components/features";
+@use "components/price-calculator";
+@use "components/pricing-component";
+@use "components/slider";
+@use "components/switch";
 @use "components/textbox";
+@use "components/toggle";
 
 @use "layout/header";
 

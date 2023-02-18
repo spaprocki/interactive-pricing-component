@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 22px;
+    margin: 0 scaleSize(12px, 16px);
+
+    &__input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:focus + .switch__slider {
+            background-color: $color-bg-slider;
+        }
+
+        &:checked + .switch__slider:before {
+            -webkit-transform: translateX(21px);
+            -ms-transform: translateX(21px);
+            transform: translateX(21px);
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-bg-toggle;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 15px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 4px;
+            bottom: 4px;
+            background-color: $color-white;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,8 +1,8 @@
 @use "../abstracts" as *;
 
 body {
-  box-sizing: border-box;
   @include flex-column-align-center;
+  box-sizing: border-box;
   background-color: $color-bg-main;
   font-family: $default-font-stack;
   font-weight: $default-font-weight;

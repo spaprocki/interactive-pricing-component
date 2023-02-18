@@ -24,5 +24,9 @@
     transform: scale(1.02);
   }
 
+  &:hover {
+    color: $color-white;
+  }
+
   @include focus-styles($color-bg-btn);
 }

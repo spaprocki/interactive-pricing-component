@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.price-calculator {
+    @include flex-column-align-center;
+    padding-bottom: scaleSize(2.375rem, 2.5rem);
+
+    &__pageviews {
+        font-weight: $default-font-weight-bold;
+        font-size: scaleSize(12px, 14px);
+        line-height: scaleSize(16px, 19px);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    &__slider {
+        margin-top: 24px;
+    }
+
+    &__price {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        font-size: scaleSize(14px, 16px);
+        line-height: scaleSize(19px, 22px);
+
+        & span {
+            font-weight: $default-font-weight-bold;
+            font-size: scaleSize(32px, 40px);
+            line-height: scaleSize(44px, 55px);
+            letter-spacing: -1px;
+            color: $color-text-dark;
+            margin-right: 8px;
+        }
+    }
+
+    &__toggle {
+        margin-top: scaleSize(34px, 56px);
+    }
+}
