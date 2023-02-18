@@ -3,6 +3,13 @@
 .price-calculator {
     @include flex-column-align-center;
     padding-bottom: scaleSize(2.375rem, 2.5rem);
+    padding: scaleSize(34px, 40px) scaleSize(24px, 48px) scaleSize(2.375rem, 2.5rem) scaleSize(24px, 40px);
+
+    @include respond(big-screen) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 
     &__pageviews {
         font-weight: $default-font-weight-bold;
@@ -10,10 +17,22 @@
         line-height: scaleSize(16px, 19px);
         letter-spacing: 2px;
         text-transform: uppercase;
+
+        @include respond(big-screen) {
+            order: 1;
+            margin-top: 18px;
+            width: 50%;
+        }
     }
 
     &__slider {
         margin-top: 24px;
+
+        @include respond(big-screen) {
+            order: 3;
+            margin-top: 40px;
+            width: 100%;
+        }
     }
 
     &__price {
@@ -22,6 +41,13 @@
         align-items: center;
         font-size: scaleSize(14px, 16px);
         line-height: scaleSize(19px, 22px);
+
+        @include respond(big-screen) {
+            order: 2;
+            margin-top: 0;
+            width: 50%;
+            justify-content: flex-end;
+        }
 
         & span {
             font-weight: $default-font-weight-bold;
@@ -35,5 +61,10 @@
 
     &__toggle {
         margin-top: scaleSize(34px, 56px);
+
+        @include respond(big-screen) {
+            order: 4;
+            width: 100%;
+        }
     }
 }

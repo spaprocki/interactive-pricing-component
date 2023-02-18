@@ -6,7 +6,7 @@
     }
 
     @if $breakpoint == big-screen {
-        @media (min-width: 90rem) {
+        @media (min-width: 64rem) {
             @content;
         }
     }
