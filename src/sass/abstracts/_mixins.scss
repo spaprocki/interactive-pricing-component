@@ -4,11 +4,7 @@
             @content;
         }
     }
-    @if $breakpoint == stats {
-        @media (min-width: 64rem) {
-            @content;
-        }
-    }
+
     @if $breakpoint == big-screen {
         @media (min-width: 90rem) {
             @content;
@@ -20,8 +16,4 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-@mixin horizontal-padding {
-    padding: 0 clamp(1rem, calc(6.11vw + -0.43rem), 2.5rem);
 }
