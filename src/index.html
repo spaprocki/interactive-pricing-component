@@ -1,39 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive pricing component</title>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__textbox textbox">
+        <h1 class="heading">Simple, traffic-based pricing</h1>
+        <p class="paragraph">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+    </header>
+    <main class="main">
+      <article class="pricing-component">
+        <form class="form">
+          <div class="pricing-component__price-calculator price-calculator">
+            <label class="price-calculator__pageviews" for="price"
+              ><span></span> Pageviews</label
+            >
+            <input
+              class="price-calculator__slider slider"
+              type="range"
+              name="pricing"
+              id="pricing-slider"
+              min="0"
+              max="40"
+              step="10"
+              value="20"
+            />
+            <label class="price-calculator__price" for="price"
+              ><span>$</span>/month</label
+            >
+            <div class="price-calculator__toggle toggle">
+              <label for="toggle" class="toggle__label--monthly"
+                >Monthly Billing</label
+              >
+              <input
+                class="price-calculator__checkbox checkbox"
+                type="checkbox"
+                id="toggle"
+              />
+              <label for="toggle" class="toggle__label--yearly"
+                >Yearly Billing <span>25% discount</span></label
+              >
+            </div>
+          </div>
+          <div class="pricing-component__cta cta">
+            <ul class="cta__features features">
+              <li class="features__item">
+                <img
+                  src="./assets/icon-check.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="features__icon"
+                />
+                <p class="features__paragraph">Unlimited websites</p>
+              </li>
+              <li class="features__item">
+                <img
+                  src="./assets/icon-check.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="features__icon"
+                />
+                <p class="features__paragraph">100% data ownership</p>
+              </li>
+              <li class="features__item">
+                <img
+                  src="./assets/icon-check.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="features__icon"
+                />
+                <p class="features__paragraph">Email reports</p>
+              </li>
+            </ul>
+            <button class="btn btn--submit">Start my trial</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </body>
 </html>
