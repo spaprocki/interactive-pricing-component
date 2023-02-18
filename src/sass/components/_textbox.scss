@@ -5,11 +5,11 @@
     text-align: center;
 
     & .paragraph {
-        margin-top: scaleSize(8px, 12px);
-        width: 180px;
+        margin-top: scaleSize(0.5rem, 0.75rem);
+        width: 11.25rem;
 
         @include respond(medium-screen) {
-            width: 367px;
+            width: 22.9375rem;
         }
     }
 }

@@ -2,12 +2,12 @@
 
 .heading {
   font-weight: $default-font-weight-bold;
-  font-size: scaleSize(20px, 28px);
-  line-height: scaleSize(27px, 38px);
+  font-size: scaleSize(1.25rem, 1.75rem);
+  line-height: scaleSize(1.6875rem, 2.375rem);
   color: $color-text-dark;
 }
 
 .paragraph {
-  font-size: scaleSize(13px, 15px);
-  line-height: scaleSize(23px, 21px);
+  font-size: scaleSize(0.8125rem, 0.9375rem);
+  line-height: scaleSize(1.4375rem, 1.3125rem);
 }

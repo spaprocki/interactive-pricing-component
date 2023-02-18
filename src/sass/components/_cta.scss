@@ -2,8 +2,8 @@
 
 .cta {
     @include flex-column-align-center;
-    padding-top: scaleSize(24px, 32px);
-    padding: scaleSize(24px, 32px) scaleSize(24px, 48px) 32px scaleSize(24px, 40px);
+    padding-top: scaleSize(1.5rem, 2rem);
+    padding: scaleSize(1.5rem, 2rem) scaleSize(1.5rem, 3rem) 2rem scaleSize(1.5rem, 2.5rem);
 
     @include respond(big-screen) {
         flex-direction: row;
@@ -15,7 +15,7 @@
     }
 
     &__btn {
-        margin-top: 32px;
+        margin-top: 2rem;
 
         @include respond(big-screen) {
             margin-top: 0;

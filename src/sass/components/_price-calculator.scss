@@ -3,7 +3,7 @@
 .price-calculator {
     @include flex-column-align-center;
     padding-bottom: scaleSize(2.375rem, 2.5rem);
-    padding: scaleSize(34px, 40px) scaleSize(24px, 48px) scaleSize(2.375rem, 2.5rem) scaleSize(24px, 40px);
+    padding: scaleSize(2.125rem, 2.5rem) scaleSize(1.5rem, 3rem) scaleSize(38px, 40px) scaleSize(1.5rem, 2.5rem);
 
     @include respond(big-screen) {
         flex-direction: row;
@@ -13,34 +13,34 @@
 
     &__pageviews {
         font-weight: $default-font-weight-bold;
-        font-size: scaleSize(12px, 14px);
-        line-height: scaleSize(16px, 19px);
-        letter-spacing: 2px;
+        font-size: scaleSize(0.75rem, 0.875rem);
+        line-height: scaleSize(1rem, 1.1875rem);
+        letter-spacing: 0.125rem;
         text-transform: uppercase;
 
         @include respond(big-screen) {
             order: 1;
-            margin-top: 18px;
+            margin-top: 1.125rem;
             width: 50%;
         }
     }
 
     &__slider {
-        margin-top: 24px;
+        margin-top: 1.5rem;
 
         @include respond(big-screen) {
             order: 3;
-            margin-top: 40px;
+            margin-top: 2.5rem;
             width: 100%;
         }
     }
 
     &__price {
-        margin-top: 40px;
+        margin-top: 2.5rem;
         display: flex;
         align-items: center;
-        font-size: scaleSize(14px, 16px);
-        line-height: scaleSize(19px, 22px);
+        font-size: scaleSize(0.875rem, 1rem);
+        line-height: scaleSize(1.1875rem, 1.375rem);
 
         @include respond(big-screen) {
             order: 2;
@@ -51,16 +51,16 @@
 
         & span {
             font-weight: $default-font-weight-bold;
-            font-size: scaleSize(32px, 40px);
-            line-height: scaleSize(44px, 55px);
-            letter-spacing: -1px;
+            font-size: scaleSize(2rem, 2.5rem);
+            line-height: scaleSize(2.75rem, 3.4375rem);
+            letter-spacing: -0.0625rem;
             color: $color-text-dark;
-            margin-right: 8px;
+            margin-right: 0.5rem;
         }
     }
 
     &__toggle {
-        margin-top: scaleSize(34px, 56px);
+        margin-top: scaleSize(2.125rem, 3.5rem);
 
         @include respond(big-screen) {
             order: 4;
