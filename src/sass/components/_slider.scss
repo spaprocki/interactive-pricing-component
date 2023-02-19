@@ -1,11 +1,12 @@
 @use "../abstracts/index" as *;
 
 @mixin slider-track-styles {
-    background: $color-bg-slider-bar;
-    border-radius: 0.3125rem;
-    width: 100%;
+    // border-radius: 0.3125rem;
+    // width: 100%;
     height: 0.5rem;
     cursor: pointer;
+    position: relative;
+    // background: $color-bg-slider-bar;
 }
 
 @mixin slider-thumb-styles {
@@ -36,6 +37,11 @@
 .slider {
     width: 100%;
     -webkit-appearance: none;
+    height: 0.5rem;
+    border-radius: 0.3125rem;
+    background: linear-gradient(90deg, $color-bg-slider-bar-full 50%, $color-bg-slider-bar 50%);
+
+    @include focus-styles($color-bg-slider, 17.5px);
 
     &::-webkit-slider-runnable-track {
         @include slider-track-styles;

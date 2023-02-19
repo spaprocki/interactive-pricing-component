@@ -18,6 +18,9 @@ sliderElement.addEventListener('input', (e) => {
   pageviewsElement.textContent = myMappings[sliderPosition].pageviews;
   priceElement.textContent =
     myMappings[sliderPosition].price * (1 - discount) + '.00$';
+  e.target.style.background = `linear-gradient(90deg, #a5f3eb ${
+    sliderPosition * 25
+  }%, #eaeefb ${sliderPosition * 25}%)`;
 });
 
 toggleElement.addEventListener('click', (e) => {

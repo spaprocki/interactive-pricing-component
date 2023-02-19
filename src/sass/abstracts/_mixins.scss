@@ -18,12 +18,12 @@
     align-items: center;
 }
 
-@mixin focus-styles($outline-color: currentColor) {
+@mixin focus-styles($outline-color: currentColor, $outline-offset: 0.3125rem) {
     &:focus,
     :focus-visible {
         outline-width: 0.1875rem;
         outline-style: dashed;
-        outline-offset: 0.3125rem;
+        outline-offset: $outline-offset;
         outline-color: $outline-color;
     }
 
