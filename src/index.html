@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="css/main.css" />
 
+    <script src="scripts/slider.js" defer></script>
+
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
@@ -36,7 +38,7 @@
         <form>
           <div class="pricing-component__price-calculator price-calculator">
             <label class="price-calculator__pageviews" for="pricing-slider"
-              ><span>100k</span> Pageviews</label
+              ><span id="pageviews">100k</span> Pageviews</label
             >
             <input
               class="price-calculator__slider slider"
@@ -44,19 +46,24 @@
               name="pricing"
               id="pricing-slider"
               min="0"
-              max="40"
-              step="10"
-              value="20"
+              max="4"
+              step="1"
+              value="2"
             />
             <label class="price-calculator__price" for="pricing-slider"
-              ><span>16.00$</span>/ month</label
+              ><span id="price">16.00$</span>/ month</label
             >
             <div class="price-calculator__toggle toggle">
               <label class="toggle__label toggle__label--monthly" for="toggle"
                 >Monthly Billing</label
               >
               <label class="toggle__switch switch" for="toggle">
-                <input class="switch__input" type="checkbox" id="toggle" />
+                <input
+                  class="switch__input"
+                  type="checkbox"
+                  id="toggle"
+                  value="monthly"
+                />
                 <span class="switch__slider"></span>
               </label>
               <label class="toggle__label toggle__label--yearly" for="toggle"
