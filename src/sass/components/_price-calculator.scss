@@ -59,9 +59,10 @@
     }
 
     &__toggle {
-        margin-top: scaleSize(2.125rem, 3.5rem);
+        margin-top: 34px;
 
         @include respond(big-screen) {
+            margin-top: scaleSize(34px, 56px);
             order: 4;
             width: 100%;
         }

@@ -37,9 +37,9 @@
       <article class="pricing-component">
         <form>
           <div class="pricing-component__price-calculator price-calculator">
-            <label class="price-calculator__pageviews" for="pricing-slider"
-              ><span id="pageviews">100k</span> Pageviews</label
-            >
+            <p class="price-calculator__pageviews" for="pricing-slider">
+              <span id="pageviews">100k</span> Pageviews
+            </p>
             <input
               class="price-calculator__slider slider"
               type="range"
@@ -49,31 +49,52 @@
               max="4"
               step="1"
               value="2"
+              aria-valuetext="100k pageviews for 16.00$ a month"
             />
+            <label for="pricing-slider" class="u-sr-only">Price Range</label>
             <span class="slider__progress-bar"></span>
-            <label class="price-calculator__price" for="pricing-slider"
-              ><span id="price">16.00$</span>/ month</label
-            >
-            <div class="price-calculator__toggle toggle">
-              <label class="toggle__label toggle__label--monthly" for="toggle"
-                >Monthly Billing</label
+            <p class="price-calculator__price" for="pricing-slider">
+              <span id="price">16.00$</span>/ month
+            </p>
+
+            <fieldset
+            class="price-calculator__toggle toggle__field"
+            aria-label="Billing frequency switcher"
+            role="radiogroup"
+          >
+            <legend class="u-sr-only">
+              Billing frequency
+            </legend>
+              <label class="toggle__label toggle__label--monthly" for="monthly"
+                >Monthly billing</label
               >
-              <label class="toggle__switch switch" for="toggle">
+              <div class="toggle__wrapper">
                 <input
-                  class="switch__input"
-                  type="checkbox"
-                  id="toggle"
-                  value="monthly"
+                  class="toggle__input toggle__input--monthly"
+                  type="radio"
+                  name="billing-frequency"
+                  id="monthly"
                 />
-                <span class="switch__slider"></span>
-              </label>
-              <label class="toggle__label toggle__label--yearly" for="toggle"
+                <input
+                  class="toggle__input toggle__input--yearly"
+                  type="radio"
+                  name="billing-frequency"
+                  id="yearly"
+                  checked
+                />
+                <div class="toggle__bg"></div>
+                <div class="toggle__slider"></div>
+              </div>
+                
+              </span>
+              <label class="toggle__label toggle__label--yearly" for="yearly"
                 >Yearly Billing
                 <span class="toggle__discount"
                   >-25% <span>discount</span></span
                 ></label
               >
             </div>
+          </fieldset>
           </div>
           <div class="pricing-component__line"></div>
           <div class="pricing-component__cta cta">
@@ -108,6 +129,8 @@
             </ul>
             <button class="cta__btn btn" type="submit">Start my trial</button>
           </div>
+
+          
         </form>
       </article>
     </main>
