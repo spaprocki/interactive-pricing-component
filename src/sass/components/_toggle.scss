@@ -75,16 +75,43 @@
         cursor: pointer;
 
         &:focus ~ .toggle__bg,
-        &:hover ~ .toggle__bg {
-            background-color: $color-bg-slider;
+        &:focus-visible ~ .toggle__bg {
+            outline-width: 0.1875rem;
+            outline-style: dashed;
+            outline-offset: 5px;
+            outline-color: $color-bg-slider;
         }
 
-        &--monthly:checked ~ .toggle__slider {
-            left: 4px;
+        &:focus:not(:focus-visible) ~ .toggle__bg {
+            outline: none;
         }
 
-        &--yearly:checked ~ .toggle__slider {
-            left: 24px;
+        &:focus ~ .toggle__slider,
+        &:focus-visible ~ .toggle__slider {
+            outline-width: 0.1875rem;
+            outline-style: solid;
+            outline-offset: 1px;
+            outline-color: $color-bg-slider-grab;
+        }
+
+        &:focus:not(:focus-visible) ~ .toggle__slider {
+            outline: none;
+        }
+
+        &--monthly:checked {
+            & ~ .toggle__slider {
+                left: 4px;
+            }
+        }
+
+        &--yearly:checked {
+            & ~ .toggle__slider {
+                left: 24px;
+            }
+
+            & ~ .toggle__bg {
+                background-color: $color-bg-slider;
+            }
         }
     }
 }
