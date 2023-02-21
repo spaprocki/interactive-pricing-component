@@ -48,7 +48,7 @@ function setDiscount(discountRate) {
 
 function updatePrice() {
   priceElement.textContent =
-    myMappings[sliderPosition].price * (1 - discount) + '.00$';
+    '$' + myMappings[sliderPosition].price * (1 - discount) + '.00';
 }
 
 function updatePageviews() {
