@@ -32,7 +32,7 @@
     background: linear-gradient(90deg, $color-bg-slider-bar-full 50%, $color-bg-slider-bar 50%);
     cursor: pointer;
 
-    @include focus-styles($color-bg-slider, 17.5px);
+    @include focus-styles($color-bg-slider, 1.0938rem);
 
     &::-webkit-slider-thumb {
         @include slider-thumb-styles;

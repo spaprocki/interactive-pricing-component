@@ -3,7 +3,7 @@
 .price-calculator {
     @include flex-column-align-center;
     padding-bottom: scaleSize(2.375rem, 2.5rem);
-    padding: scaleSize(2.125rem, 2.5rem) scaleSize(1.5rem, 3rem) scaleSize(38px, 40px) scaleSize(1.5rem, 2.5rem);
+    padding: scaleSize(2.125rem, 2.5rem) scaleSize(1.5rem, 3rem) scaleSize(2.375rem, 2.5rem) scaleSize(1.5rem, 2.5rem);
 
     @include respond(big-screen) {
         flex-direction: row;
@@ -26,7 +26,7 @@
     }
 
     &__slider {
-        margin-top: 40px;
+        margin-top: 2.5rem;
 
         @include respond(big-screen) {
             order: 3;
@@ -62,7 +62,7 @@
         margin-top: 34px;
 
         @include respond(big-screen) {
-            margin-top: scaleSize(34px, 56px);
+            margin-top: scaleSize(2.125rem, 3.5rem);
             order: 4;
             width: 100%;
         }

@@ -4,15 +4,15 @@
   @include flex-column-align-center;
   z-index: 1;
   width: 100%;
-  border-radius: 0px 0px 0px 191.5px;
-  padding-top: scaleSize(57px, 67px);
-  padding-bottom: scaleSize(198px, 237px);
+  border-radius: 0rem 0rem 0rem 11.9688rem;
+  padding-top: scaleSize(3.5625rem, 4.1875rem);
+  padding-bottom: scaleSize(12.375rem, 14.8125rem);
   background-color: $color-bg-header;
 
   &__textbox {
     width: 100%;
-    padding-top: scaleSize(32px, 37px);
-    padding-bottom: scaleSize(32px, 37px);
+    padding-top: scaleSize(2rem, 2.3125rem);
+    padding-bottom: scaleSize(2rem, 2.3125rem);
     background-image: url("../assets/pattern-circles.svg");
     background-repeat: no-repeat;
     background-position: center;
